@@ -1,0 +1,62 @@
+<div class="container">
+  <h2 style="text-align: center; margin-top: 2em;">Employee Management </h2>
+
+  <div class="row">
+    <div class="col-md-12" style="">
+      <div class="row justify-content-center">
+        <div>
+          <span class="anchor" id="addUserForm"></span>
+          <hr class="mb-5">
+          <!-- form card register -->
+          <div class="card card-outline-secondary">
+            <div class="card-header">
+              <h3 class="mb-0">Add Employee</h3>
+            </div>
+            <div class="card-body">
+              <form ngNoForm autocomplete="off">
+                <div class="form-group">
+                  <label for="inputName">Name</label>
+                  <input class="form-control" id="inputName" placeholder="Full name" [(ngModel)]="name" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="inputName">Email</label>
+                  <input class="form-control" id="inputEmail" pattern="/^[a-z]+\\\\[a-z]+\\\\[a-z]+$/" placeholder="Email" [(ngModel)]="email" type="text">
+                </div>
+                <!--<div class="form-group">
+                  <label for="inputName">Address</label>
+                  <input class="form-control" id="inputAddress" placeholder="Address" [(ngModel)]="address" type="text">
+                </div>-->
+                <!--<div class="form-group">
+                  <label>Designation</label>
+                  <select (change)="filterForRoles($event.target.value)"class="form-control"  >
+                    <option value="Manager"></option>
+                    <option value="Senior Executive"></option>
+                    <option value="Executive"></option>
+                    <option value="Engineer"></option>
+                    <option value="Tester"></option>
+                    &lt;!&ndash;<option *ngFor="let role of ROLES" value={{role.id}}>
+                      {{role.roleName}}
+                    </option>&ndash;&gt;
+                  </select>
+                </div>-->
+                <small class="form-text text-muted" id="passwordHelpBlock">Please create your user. user will be added into the database and you will be able to see the user in the all employee panel</small>
+
+                <div class="form-group" style="text-align: center; margin-top: 0.5em;">
+                  <button class="btn btn-success btn-lg" style="margin: auto" type="button" (click)="addEmployee()">Add Employee</button>
+                </div>
+              </form>
+            </div>
+          </div><!-- /form card register -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" style="">
+      <div class="row justify-content-center">
+        <app-all-employees></app-all-employees>
+      </div>
+    </div>
+  </div>
+</div>

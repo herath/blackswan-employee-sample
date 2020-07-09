@@ -1,0 +1,27 @@
+<div class="container">
+  <h2 style="text-align: center; margin-top: 2em; margin-bottom: 1em;">All Employees</h2>
+
+  <div class="row">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Employee Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of EMPLOYEES">
+        <td scope="row">{{user.id}}</td>
+        <td scope="row">{{user.name}}</td>
+        <td scope="row">{{user.email}}</td>
+        <td scope="row" (click)="deleteEmployee(user.id)"><button>Delete</button></td>
+        <td scope="row" (click)="editEmployee(user.id)"><button>Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
